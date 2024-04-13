@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useContext } from 'react';
+import Popular from './components/Popular';
+import AnimeItem from './components/AnimeItem';
+import NavabarComponent from './components/NavbarComponent';
+import { useGlobalContext } from './context/GlobalContext';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Upcoming from './components/Upcoming';
+import Airing from './components/Airing';
+import SideBar from './components/SideBar';
+import Watch from './components/Watch';
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+      <NavabarComponent/>
+      <Routes>
+        <Route path="/" element={<Popular/>} />
+        <Route path="/anime/:id/:name" element={<AnimeItem />} />
+        <Route path="/upcoming/" element={<Upcoming/>} />
+        <Route path="/airing/" element={<Airing/>} />
+        <Route path="/watch/:id/:name" element={<Watch/>} />
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
