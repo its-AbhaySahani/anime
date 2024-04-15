@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-const DB = 'mongodb+srv://process.env.USER:process.env.PASSWORD@gokuflix.5lrfzuy.mongodb.net/?retryWrites=true&w=majority&appName=GokuFlix';
+const DB = 'mongodb+srv://abhay12115826:UgFiiCku1Dw6jVlI@gokuflix.5lrfzuy.mongodb.net/?retryWrites=true&w=majority&appName=GokuFlix';
 
 const connectDb = async () => {
     try{

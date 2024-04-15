@@ -8,7 +8,7 @@ const cors=require("cors");
 
 app.use(cors())
 app.use(express.json())
-app.use(require('./router/auth'));
+app.use(require('./routers/auth'));
 
 
 // Start the server
