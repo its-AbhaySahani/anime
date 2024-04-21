@@ -8,6 +8,7 @@ import Upcoming from './components/Upcoming';
 import Airing from './components/Airing';
 import SideBar from './components/SideBar';
 import Watch from './components/Watch';
+import Auth from './components/loginPage/login.js';
 function App() {
 
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/upcoming/" element={<Upcoming/>} />
         <Route path="/airing/" element={<Airing/>} />
         <Route path="/watch/:id/:name" element={<Watch/>} />
+        <Route path="/login" element={<Auth/>} />
       </Routes>
     </BrowserRouter>
     </div>
